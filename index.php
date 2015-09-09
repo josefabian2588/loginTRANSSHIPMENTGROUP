@@ -8,9 +8,24 @@
 // 
 //=============================================================================
 
+//echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+//echo $_SERVER['HTTP_REFERER'];
+
+$urlRedirect= parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+
+if ($urlRedirect == "si.startrackllc.com"){
+
+  header("Location: http://www.ptg.com.pa");
+  die();
+}
+
+
+
 $estadoError = isset($_GET['loginError']) ? $_GET['loginError'] : null ;
 
 	 $idcliente="150"
+
 
 
  ?>
@@ -83,7 +98,8 @@ $estadoError = isset($_GET['loginError']) ? $_GET['loginError'] : null ;
                     </div>
 
 
-			       	 <h3 class="bg-danger" id="error"><?php echo "$estadoError"; ?></h3>
+			       	 <h3 class="bg-danger"  id="error">
+                <?php echo "$estadoError"; ?></h3>
 			
                 </form>     
 
