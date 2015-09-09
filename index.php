@@ -14,7 +14,7 @@
 
 $urlRedirect= parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
 
-if ($urlRedirect == "si.startrackllc.com"){
+if ($urlRedirect == "skydata.startrackllc.com"){
 
   header("Location: http://www.ptg.com.pa");
   die();
@@ -24,7 +24,7 @@ if ($urlRedirect == "si.startrackllc.com"){
 
 $estadoError = isset($_GET['loginError']) ? $_GET['loginError'] : null ;
 
-	 $idcliente="150"
+	 $idcliente="670"
 
 
 
@@ -67,7 +67,7 @@ $estadoError = isset($_GET['loginError']) ? $_GET['loginError'] : null ;
 
             <div class="panel-body" >
 
-                <form action="http://si.startrackllc.com//login.php"name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                <form action="http://skydata.startrackllc.com//login.php"name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
                    
                     <input class="loginput" type="hidden" name="client" id="client" size="5" value=<?php echo $idcliente ?> >
 
